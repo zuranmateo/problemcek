@@ -54,7 +54,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: oklch(54.313% 0.2879 295.44);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -114,6 +114,15 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer utilities{
+  .navbar{
+    @apply w-screen border-b-2 shadow-xl;
+  }
+  .box-container{
+    @apply bg-primary px-10 py-5 w-screen min-h-60 text-4xl flex items-center justify-center text-white;
+  }
 }
 
 @layer base {
