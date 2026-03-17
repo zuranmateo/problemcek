@@ -44,8 +44,8 @@ export default function RegisterPage() {
   };
 
   return (
-    <main className="main-two">
-      <form onSubmit={handleSubmit} className="login-container my-1">
+    <main className="main">
+      <form onSubmit={handleSubmit} className="text-white bg-primary p-8 space-y-2 rounded-lg shadow w-full max-w-md">
       <h2 className="mb-4 text-center text-2xl text-textprimary">Register</h2>
 
       {error && <p className="text-red-500 mb-2">{error}</p>}
@@ -89,13 +89,13 @@ export default function RegisterPage() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full p-2 my-5 bg-blue-500 text-white rounded hover:bg-blue-600"
+        className="w-full p-2 my-5 bg-secondary text-white rounded hover:bg-secondaryDarkened"
       >
         {loading ? "Registering..." : "Register"}
       </button>
       <p className="text-center text-sm mt-3">
   already have an account?{" "}
-  <Link href="./login" className="text-blue-600 underline">
+  <Link href="./login" className="text-linkColor underline">
     Login
   </Link>
 </p>

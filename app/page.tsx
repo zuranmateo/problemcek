@@ -1,12 +1,16 @@
-import React from 'react'
-import Navbar from '@/components/navbar'
-
 export default function page(){
   return (
     <>
-      <Navbar />
       <div className='box-container'>
-        pozdravljeni
+        PROBLEMČEK
+        <div className="box-container-text">
+          Stop guessing - start validating
+        </div>
+      </div>
+      <div className="main2">
+        <div className="text-xl px-30">
+          AME je spletna platforma, ki podjetnikom pomaga preveriti, ali ima njihova ideja potencial. Z uporabo umetne inteligence in prilagojene analize podatkov AME hitro najde ključne informacije, ustvari grafe in predstavi tržno oceno ideje – brez zamudnega raziskovanja in zapletenih postopkov. Zanesljivo, hitro in pametno.
+        </div>
       </div>
     </>
   )

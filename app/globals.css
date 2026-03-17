@@ -30,10 +30,12 @@
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondaryDarkened: var(--secondaryDarkened);
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
+  --color-linkColor: var(--linkColor);
+  --color-footerColor: var(--footerColor);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -54,10 +56,12 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(54.313% 0.2879 295.44);
+  --primary: oklch(50.18% 0.28956 281.741);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(57.056% 0.29094 304.698);
+  --secondaryDarkened: oklch(42.827% 0.22381 303.943);
+  --linkColor: oklch(28.601% 0.17058 281.081);
+  --footerColor: oklch(43.861% 0.00005 271.152);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
@@ -91,8 +95,10 @@
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.87 0.00 0);
   --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(57.056% 0.29094 304.698);
+  --secondaryDarkened: oklch(42.827% 0.22381 303.943);
+  --linkColor: oklch(28.601% 0.17058 281.081);
+  --footerColor: oklch(43.861% 0.00005 271.152);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.371 0 0);
@@ -118,10 +124,28 @@
 
 @layer utilities{
   .navbar{
-    @apply w-screen border-b-2 shadow-xl;
+    @apply border-b-2 shadow-xl py-3 px-2 flex justify-between;
+  }
+  .footer{
+    @apply flex justify-between items-center text-sm bg-footerColor text-white py-3;
   }
   .box-container{
-    @apply bg-primary px-10 py-5 w-screen min-h-60 text-4xl flex items-center justify-center text-white;
+    @apply bg-primary px-10 py-5 w-screen min-h-60 text-6xl flex flex-col items-center justify-center text-white;
+  }
+  .box-container-text{
+    @apply text-xl;
+  }
+  .main{
+    @apply px-20 py-30 flex flex-col justify-center items-center;
+  }
+  .main2{
+    @apply px-25 pb-30 pt-10 flex flex-col justify-center items-center;
+  }
+  .login-text-area{
+    @apply px-3 py-2 w-full bg-white text-black;
+  }
+  .linkV1{
+    @apply text-linkColor underline;
   }
 }
 

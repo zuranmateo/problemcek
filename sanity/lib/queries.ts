@@ -32,6 +32,24 @@ export const USER_BY_ID_QUERY = defineQuery(`
 }
 `);
 
+export const USER_BY_EMAIL_QUERY = defineQuery(`
+   *[_type == "user" && email == $email][0]{
+  _id,
+  id,
+  name,
+  surname,
+  email,
+  password,
+  "image": image.asset->url,
+  imageUrl,
+  _rev,
+  _type,
+  _createdAt,
+  _updatedAt
+}
+`);
+
+
 export const CHECK_FOR_ID_QUERY = defineQuery(`
    *[_type == "user" && id == $generatedId][0]{
       id

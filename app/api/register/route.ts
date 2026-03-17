@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
     } while (existingId);
 
  const newUser = await writeClient.create({
-  _type: "author",
+  _type: "user",
   id: generatedId, 
   name,
   email,

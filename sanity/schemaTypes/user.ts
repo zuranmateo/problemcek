@@ -6,6 +6,11 @@ export const user = defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'id',
+      title: 'id',
+      type: 'number',
+    }),
+    defineField({
       name: 'name',
       title: 'Name',
       type: 'string',

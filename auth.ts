@@ -1,7 +1,7 @@
 import { default as NextAuth } from 'next-auth';
 import GitHub from "next-auth/providers/github"
 import { client } from "./sanity/lib/client";
-import { USER_BY_GITHUB_ID_QUERY, USER_BY_ID_QUERY } from "./sanity/lib/queries";
+import { USER_BY_EMAIL_QUERY, USER_BY_GITHUB_ID_QUERY } from "./sanity/lib/queries";
 import { writeClient } from "./sanity/lib/write-client";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
@@ -28,7 +28,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   const password = String(credentials.password);
 
   const user = await client.fetch(
-  USER_BY_ID_QUERY, { email });
+  USER_BY_EMAIL_QUERY, { email });
 
   if (!user) return null;
   if (!user.password) return null;
