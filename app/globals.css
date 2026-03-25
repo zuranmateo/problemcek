@@ -135,6 +135,9 @@
   .box-container-text{
     @apply text-xl;
   }
+  .subheading{
+    @apply text-5xl text-white bg-secondary rounded-2xl p-4 mb-3;
+  }
   .main{
     @apply px-20 py-30 flex flex-col justify-center items-center;
   }
@@ -146,6 +149,15 @@
   }
   .linkV1{
     @apply text-linkColor underline;
+  }
+  .edit-form-btn{
+    @apply hover:cursor-pointer text-white hover:bg-secondaryDarkened bg-secondary rounded-2xl px-6 py-2 mt-2  flex;
+  }
+  .edit-form-input{
+    @apply bg-white text-black rounded-xl py-1 px-3;
+  }
+  .edit-form-label{
+    @apply text-white text-xl;
   }
 }
 

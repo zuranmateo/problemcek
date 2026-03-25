@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -5,6 +6,8 @@ import { Toaster } from "sonner";
 import Navbar from '@/components/navbar';
 import { SanityLive } from "@/sanity/lib/live";
 import Footer from "@/components/footer";
+import 'easymde/dist/easymde.min.css';
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

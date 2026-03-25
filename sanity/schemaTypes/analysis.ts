@@ -11,19 +11,19 @@ export const analysis = defineType({
       type: 'string',
     }),
     defineField({
-      name: 'isGood',
+      name: 'isgood',
       title: 'Ali je analiza dobra',
       type: 'boolean',
     }),
     defineField({
-      name: 'userInput',
+      name: 'userinput',
       title: 'Uporabnikov vnos',
-      type: 'text',
+      type: 'markdown',
       validation: (Rule) => Rule.min(10).max(500).required().error("please enter valid number of characters!"),
     }),
     defineField({
-      name: 'aiAnalysis',
-      title: 'AI analiza (Markdown)',
+      name: 'aianalysis',
+      title: 'AIanaliza',
       type: 'markdown',
     }),
     defineField({
