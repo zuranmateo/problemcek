@@ -36,7 +36,7 @@ export default function OrderForm(){
                 toast.success("Your comment was created succesfully")
             }
 
-            router.push(`/ordered`)
+            router.push(`/order /ordered`)
         }
         catch (error){
             if(error instanceof z.ZodError){

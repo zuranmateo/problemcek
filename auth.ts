@@ -87,6 +87,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         token.provider = "credentials";
         token.id = user?.id;
         token._id = user?._id
+        //console.log(user?._id);
       }
       return token;
     },

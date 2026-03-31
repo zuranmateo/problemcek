@@ -1,22 +1,30 @@
 import { auth } from '@/auth';
 import { client } from '@/sanity/lib/client';
-import { USER_BY_ID_QUERY } from '@/sanity/lib/queries';
+import { ANALYSIS_BY_USER_ID_QUERY, USER_BY_ID_QUERY } from '@/sanity/lib/queries';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Mail, Edit } from 'lucide-react';
 import Link from 'next/link';
 import { SanityLive } from '@/sanity/lib/live';
 import type { Metadata } from "next";
+import OrderCard from '@/components/OrderCard';
+import { AnalysisCardType } from '@/components/OrderCard';
+
 
 export const metadata: Metadata = {
   title: "profile",
 };
+
+
+
 export default async function page({params}: {params: Promise<{id: string}>}){
 
   const id = (await params).id;
   const session = await auth();
 
   const user = await client.fetch(USER_BY_ID_QUERY, {id});
+
+  const posts = await client.fetch(ANALYSIS_BY_USER_ID_QUERY, {id})
 
   //console.log(user);
   if(!user) return notFound();
@@ -40,6 +48,18 @@ export default async function page({params}: {params: Promise<{id: string}>}){
         </div>
       </section>
       <div>
+        <div className='text-xl mt-4 mb-2 ml-3'>
+          analize:
+        </div>
+        <ul className='profile-comment-grid'>
+        {posts?.length > 0 ? (
+          posts.map((post: AnalysisCardType) => (
+            <OrderCard key={post?._id} post={post}/>
+          ))
+        ):(
+          <p className='flex items-center justify-center'>ni analiz</p>
+        )}
+      </ul>
       </div>
       <SanityLive />
     </main>

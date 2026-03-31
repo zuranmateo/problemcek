@@ -55,3 +55,39 @@ export const CHECK_FOR_ID_QUERY = defineQuery(`
       id
    }
 `)
+
+export const ANALYSIS_BY_USER_ID_QUERY = defineQuery(`
+   *[_type == "analysis" && user._ref == $id] | order(_createdAt desc) {
+   _id,
+  title,
+  _updatedAt,
+  _createdAt,
+  _rev,
+  _type,
+  slug,
+  user -> {
+   _id, name, email, "image": image.asset->url, imageUrl, _createdAt, _updatedAt, _rev, _type
+  },
+  isgood,
+  userinput,
+  aianalysis
+   }
+`)
+
+export const ANALYSIS_BY_ANALYSIS_SLUG_QUERY = defineQuery(`
+   *[_type == "analysis" && slug.current == $slug][0] {
+   _id,
+  title,
+  _updatedAt,
+  _createdAt,
+  _rev,
+  _type,
+  slug,
+  user -> {
+   _id, name, email, "image": image.asset->url, imageUrl, _createdAt, _updatedAt, _rev, _type
+  },
+  isgood,
+  userinput,
+  aianalysis
+   }
+`)
