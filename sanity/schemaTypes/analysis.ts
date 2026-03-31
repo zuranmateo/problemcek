@@ -6,6 +6,11 @@ export const analysis = defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+    }),
+    defineField({
       name: 'title',
       title: 'Naslov',
       type: 'string',

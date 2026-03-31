@@ -34,11 +34,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
+        <div className="h-screen flex flex-col justify-between">
+          <Navbar />
         {children}
         <Footer />
         <Toaster />
         <SanityLive />
+        </div>
       </body>
     </html>
   );

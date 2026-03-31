@@ -26,6 +26,7 @@ export type Analysis = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
+  slug?: Slug;
   title?: string;
   isgood?: boolean;
   userinput?: Markdown;
@@ -78,6 +79,12 @@ export type SanityImageHotspot = {
 };
 
 export type Markdown = string;
+
+export type Slug = {
+  _type: "slug";
+  current?: string;
+  source?: string;
+};
 
 export type SanityImagePaletteSwatch = {
   _type: "sanity.imagePaletteSwatch";
@@ -175,11 +182,5 @@ export type Geopoint = {
   alt?: number;
 };
 
-export type Slug = {
-  _type: "slug";
-  current?: string;
-  source?: string;
-};
-
-export type AllSanitySchemaTypes = UserReference | Analysis | SanityImageAssetReference | User | SanityImageCrop | SanityImageHotspot | Markdown | SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageMetadata | SanityFileAsset | SanityAssetSourceData | SanityImageAsset | Geopoint | Slug;
+export type AllSanitySchemaTypes = UserReference | Analysis | SanityImageAssetReference | User | SanityImageCrop | SanityImageHotspot | Markdown | Slug | SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageMetadata | SanityFileAsset | SanityAssetSourceData | SanityImageAsset | Geopoint;
 export declare const internalGroqTypeReferenceTo: unique symbol;

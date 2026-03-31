@@ -130,7 +130,10 @@
     @apply flex justify-between items-center text-sm bg-footerColor text-white py-3;
   }
   .box-container{
-    @apply bg-primary px-10 py-5 w-screen min-h-60 text-6xl flex flex-col items-center justify-center text-white;
+    @apply bg-primary py-5 min-h-60 text-6xl flex flex-col items-center justify-center text-white;
+  }
+  .box-container2{
+    @apply bg-primary py-5 min-h-20 text-3xl flex flex-col items-center justify-center text-white;
   }
   .box-container-text{
     @apply text-xl;
@@ -158,6 +161,15 @@
   }
   .edit-form-label{
     @apply text-white text-xl;
+  }
+  .edit-form-error{
+    @apply text-red-500 text-xl;
+  }
+  .edit-form-part{
+    @apply flex flex-col mb-5;
+  }
+  .mdeditor{
+    @apply max-w-full wrap-break-word whitespace-normal;
   }
 }
 
