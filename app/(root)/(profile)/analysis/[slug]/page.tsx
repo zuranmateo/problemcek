@@ -23,7 +23,7 @@ export default async function page({params}: {params: Promise<{slug: string}>}){
 
   return (
     <div className='flex flex-col items-center'>
-        <div className='border-2 max-w-300 min-w-200 my-10'>
+        <div className='border-2 md:max-w-300 md:min-w-200 my-10'>
           <div className='text-white bg-primary text-4xl px-5 py-3'>
             {post?.title}
           </div>

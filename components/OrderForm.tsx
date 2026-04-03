@@ -36,7 +36,7 @@ export default function OrderForm(){
                 toast.success("Your comment was created succesfully")
             }
 
-            router.push(`/order /ordered`)
+            router.push(`/order/ordered`)
         }
         catch (error){
             if(error instanceof z.ZodError){
@@ -62,7 +62,7 @@ export default function OrderForm(){
     );
 
   return (
-    <form action={formAction} className='bg-primary p-5 my-4 rounded-2xl min-w-[500px]'>
+    <form action={formAction} className='bg-primary p-5 my-4 rounded-2xl min-w-[400px] md:min-w-[500px]'>
         <div className='edit-form-part'>
             <label htmlFor="title" className='edit-form-label'>Title</label>
             <Input 

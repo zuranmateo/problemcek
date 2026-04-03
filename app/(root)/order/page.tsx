@@ -15,11 +15,11 @@ export default async function page(){
         ORDER ANALYSIS
       </div>
       <div className='main2'>
-        <div className='flex'>
+        <div className='flex flex-col md:flex-row'>
           <div>
             <OrderForm />
           </div>
-          <div className="bg-secondary rounded-2xl text-white p-4 max-w-50 m-3">
+          <div className="bg-secondary rounded-2xl text-white p-4 md:max-w-50 m-3">
             Natančno opišite svojo težavo, saj vse vpliva na končni rezultat. Bodite objektivni.
             Prepričajte se, da vaše besedilo ne vsebuje slovničnih napak. Morebitna napaka v razumevanju besedila ni naša krivda.
           </div>

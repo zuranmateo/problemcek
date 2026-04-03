@@ -12,7 +12,9 @@
  * ---------------------------------------------------------------------------------
  */
 
-// Source: schema.json
+export declare const internalGroqTypeReferenceTo: unique symbol;
+
+// Source: sanity/extract.json
 export type UserReference = {
   _ref: string;
   _type: "reference";
@@ -182,5 +184,20 @@ export type Geopoint = {
   alt?: number;
 };
 
-export type AllSanitySchemaTypes = UserReference | Analysis | SanityImageAssetReference | User | SanityImageCrop | SanityImageHotspot | Markdown | Slug | SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageMetadata | SanityFileAsset | SanityAssetSourceData | SanityImageAsset | Geopoint;
-export declare const internalGroqTypeReferenceTo: unique symbol;
+export type AllSanitySchemaTypes =
+  | UserReference
+  | Analysis
+  | SanityImageAssetReference
+  | User
+  | SanityImageCrop
+  | SanityImageHotspot
+  | Markdown
+  | Slug
+  | SanityImagePaletteSwatch
+  | SanityImagePalette
+  | SanityImageDimensions
+  | SanityImageMetadata
+  | SanityFileAsset
+  | SanityAssetSourceData
+  | SanityImageAsset
+  | Geopoint;
