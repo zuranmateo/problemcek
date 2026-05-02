@@ -22,6 +22,7 @@ export default async function page(){
           <div className="bg-secondary rounded-2xl text-white p-4 md:max-w-50 m-3">
             Natančno opišite svojo težavo, saj vse vpliva na končni rezultat. Bodite objektivni.
             Prepričajte se, da vaše besedilo ne vsebuje slovničnih napak. Morebitna napaka v razumevanju besedila ni naša krivda.
+            <b> Prav tako začetno besedilo je je predloga in priporočilo, po kateri se ne rabite ravnati.</b>
           </div>
         </div>
       </div>

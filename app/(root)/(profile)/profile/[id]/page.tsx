@@ -53,7 +53,7 @@ export default async function page({params}: {params: Promise<{id: string}>}){
         </div>
         <ul className='profile-comment-grid'>
         {posts?.length > 0 ? (
-          posts.map((post: AnalysisCardType) => (
+          posts.map((post: any) => (
             <OrderCard key={post?._id} post={post}/>
           ))
         ):(

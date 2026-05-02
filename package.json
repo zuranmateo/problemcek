@@ -6,10 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "predev": "npm run typegen",
-    "prebuild": "npm run typegen",
-    "typegen": "npx sanity@latest typegen generate"
+    "lint": "eslint"
   },
   "dependencies": {
     "@google/genai": "^1.47.0",

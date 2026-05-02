@@ -14,7 +14,13 @@ export default function OrderForm(){
 
     const [errors, setErrors] = useState<Record<string, string>>({});
 
-    const [description, setDescription] = useState("");
+    const [description, setDescription] = useState(`problem:
+EPV:
+Ciljna skupina:
+kanali:
+rešitev:
+kako daleč z razvojem:
+        `);
 
     const router = useRouter();
 
@@ -90,10 +96,10 @@ export default function OrderForm(){
                     wordBreak: "break-word",
                     whiteSpace: "pre-wrap",
                     backgroundColor: "#ffffff",
-                    color: "#0a0a0a",
+                    color: "#000000",
                 }}
                 textareaProps={{
-                    placeholder: "napiši in opiši poslovno idejo",
+                    placeholder: `problem, EPV, Ciljna skupina, kanali, rešitev, kako daleč z razvojem`,
                     required: true,
                 }}
                 previewOptions={{
